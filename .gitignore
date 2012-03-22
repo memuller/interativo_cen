@@ -1,0 +1,13 @@
+*.tmproj
+log/*.log
+tmp/*
+db/*.sqlite3
+public/cache/*.html
+public/cache/*.xhtml
+public/cache/*.rss
+public/cache/*.json
+test/tmp/*
+test/coverage/*
+coverage/*
+vendor/gems/*
+vendor/plugins/*

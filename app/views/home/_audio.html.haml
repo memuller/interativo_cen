@@ -1,0 +1,17 @@
+%ul#podcast.clearfix
+	= render :partial => 'paginate' , :locals => {:contentType => "podcast", :disablePaginate => (audio.size < 5)}
+			
+	- if audio.size > 0
+		%li.thumb
+			%ul
+				- audio.each do |entry|
+					%li.grid_3
+						%p
+							= entry.title
+						%small
+							%span.time
+							= time_ago_in_words entry.published
+						%span.clear
+						%a.listen{ :href=> entry.url} Ouça esse podcast
+	- else
+		%li.empty nenhum podcast

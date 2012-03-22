@@ -1,0 +1,218 @@
+/*IMPORTS*/
+@import url("grid.css");
+
+/*RESET*/
+*{margin:0; padding:0;font-family:georgia, serif;}
+ol, ul {list-style: none;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/*SPECIAL FEATURES*/
+hr{display:none;}
+
+/*GLOBAL FEATURES*/
+body{background-color:#faefd9;}
+
+h1,h2,h3,h4,h5,h6{text-shadow:1px 1px 0 #FFF;}
+
+/*TOP*/
+#top{background:url("images/bk_top.jpg") 0 0 repeat-x; height:202px;}
+	#top #wrap h1{background:url("images/logo_top.png") 0 0 no-repeat;height:180px;text-indent:-1000px;overflow:hidden;position:relative;left:70px;}
+	#top #wrap ul{padding:25px 0 25px 173px; }
+		#top #wrap ul li{float:left;}
+			#top #wrap ul li a{background:url("images/menu_ext.png") 0 0 no-repeat;display:block; float:left;height:41px;overflow:hidden;text-indent:-1000px;}
+				#top #wrap ul li a.about{width:96px; background-position:0 0;}
+				#top #wrap ul li a.arrive{width:149px; background-position:-96px 0;}
+				#top #wrap ul li a.talk{width:132px; background-position:-245px 0;}
+				#top #wrap ul li a.about:hover{background-position:0 -41px;}
+				#top #wrap ul li a.arrive:hover{background-position:-96px -41px;}
+				#top #wrap ul li a.talk:hover{background-position:-245px -41px;}
+				
+	#top #wrap form{height:41px;padding-left:148px;}
+		#top #wrap form fieldset,#top #wrap form input{background:url("images/bk_search.png") 0 0 no-repeat;height:41px;border:none;}
+		#top #wrap form fieldset{width:289px;float:left;}
+			#top #wrap form fieldset input{color:#f1ad04;font-size:16px;font-family:Georgia,serif;font-style:italic;font-weight:bold;text-indent:10px;width:289px;}
+		#top #wrap form input[type="submit"]{width:114px; background-position:-289px 0;text-indent:-1000px;overflow:hidden;cursor:hand;}
+		#top #wrap form input[type="submit"]:hover{background-position:-289px -41px}
+#top #help{padding-top:20px;text-align:right;font-size:18px; color:#d63e19;font-style:italic;}
+/*CONTENT*/
+	/*global definition*/
+	#video,#image, #text, #podcast{margin-top:30px;margin-bottom:40px;}
+	/*batch definition titles*/
+	ul li h2.title{background:url("images/content_title.jpg") 10px 0 no-repeat; width:130px; height:89px;overflow:hidden;text-indent:-1000px;margin-bottom:20px;}
+	#video li h2{background-position:10px 0;}
+	#image li h2{background-position:10px -89px;}
+	#text li h2{background-position:10px -178px;}
+	#podcast li h2{background-position:10px -267px;}
+	
+	#video li a.play{background:url("images/play_video.png") 0 0 no-repeat; display:block;width:38px; height:38px; position:absolute; top:60px;left:80px;overflow:hidden; text-indent:-1000px;}
+	#video li a.play:hover{background-position:0 -38px;}
+	
+	/*batch definition p*/
+	ul li p{font-size:14px;font-style:italic;font-weight:bold;margin-top:5px;}
+	
+	#video li p{color:#ed9912;}
+	#image li p{color:#d63e19;}
+	#text li p{color:#79553c;}
+	#podcast li p{color:#168cd0;}
+	
+	/*Defining the position of paging and CETAS*/
+	ul li a.next,ul li a.prev{display:block;font-size:16px;font-style:italic;font-weight:bold;text-decoration:none; }
+	ul li a.next span, ul li a.prev span{background:url("images/cetas.jpg") 0 0 no-repeat;display:block;float:left;width:10px; height:19px;overflow:hidden;text-indent:1000px;}
+	
+		/*formatando posição das cetas*/
+		ul li a.next{position:relative;left:35px;}
+		ul li a.next span{background-position:-9px 0;position:relative;left:85px;}
+	
+		ul li a.prev{padding:0;}
+		ul li a.prev span{margin-right:5px;}
+	
+		#video li a.next,#video li a.prev{color:#ed9912;}
+	
+		#image li a.next,#image li a.prev{color:#d63e19;}
+			#image li a.next span{background-position:-9px -19px;}
+			#image li a.prev span{background-position:0 -19px;}
+		
+		#text li a.next, #text li a.prev{color:#79553c;}
+			#text li a.next span{background-position:-9px -38px;}
+			#text li a.prev span{background-position:0 -38px;}
+		
+		#podcast li a.next, #podcast li a.prev{color:#168cd0;}
+			#podcast li a.next span{background-position:-9px -57px;}
+			#podcast li a.prev span{background-position:0 -57px;}
+	
+		#video li a.next.disable,
+		#image li a.next.disable,
+		#text li a.next.disable,
+		#podcast li a.next.disable,
+		
+		#video li a.prev.disable,
+		#image li a.prev.disable,
+		#text li a.prev.disable,
+		#podcast li a.prev.disable{color:#aaa;
+			cursor:text;
+			}
+		
+		#video li a.next.disable span,
+		#image li a.next.disable span,
+		#text li a.next.disable span,
+		#podcast li a.next.disable span{background-position:-9px -76px;}
+		
+		#video li a.prev.disable span,
+		#image li a.prev.disable span,
+		#text li a.prev.disable span,
+		#podcast li a.prev.disable span{background-position:0 -76px;}
+	
+	/*special design to text module*/
+	#text li.grid_3 p{color:#666; font-size:12px;overflow:hidden;}
+		#text li.grid_3 p a{color:#168cd0;}
+	#text li.grid_3 a.author{color:#79553c;display:block;font-size:14px;font-style:italic;font-weight:bold;}
+	#text li.grid_3 small,#podcast li span{color:#333;display:block;font-size:12px;font-style:italic;font-weight:bold;text-align:right;}
+	#text li.grid_3 span,#podcast li span{color:#333;display:block;font-size:12px;font-style:italic;font-weight:bold;text-align:right;}
+
+	#podcast li p span{color:#168cd0;margin:5px 0; text-align:left;}
+	#podcast li a.listen{background:url("images/play_blue.jpg") 0 0 no-repeat;color:#004b76; display:block; height:20px;margin:10px 0 0 40px;font-size:14px;font-style:italic;font-weight:bold;text-indent:22px;}
+	
+	
+		/*batch definition view content*/
+		.view{background-color:#fffbf2;border:1px solid #bcac88;-moz-border-radius:10px;font-style:italic;position:absolute;z-index:1;padding:10px;}
+			/**/
+			.view p{font-size:1.5em;text-shadow:1px 1px 0 #FFF;}
+			 li small{display:block;float:left;margin:5px 10px 10px 0;}
+				 li small span{background:url("images/icons_view.jpg") 0 0 no-repeat;display:block;float:left;height:15px;margin-right:5px;}
+					#video li small span.author{background-position:1px 2px;width:11px;}	
+					#video li small span.time{background-position:-10px 2px; width:15px;}
+					#image li small span.author{background-position:1px -35px;width:11px;}	
+					#image li small span.time{background-position:-10px -35px; width:15px;}
+					li small span.author{background-position:1px -71px;width:11px;}	
+					li small span.time{background-position:-10px -71px; width:15px;}
+					#image small{color:#860300;}
+					#text small,.view a.author{color:#79553c;display:block;float:left;margin:5px 10px 10px 0;font-size:12px;}
+					.view a.author span{background:url("images/icons_view.jpg") 1px -71px no-repeat;display:block;float:left;height:15px;margin-right:5px;width:11px;}
+					
+					/*close view*/
+					#video .view #close{color:#ED9912;}
+					#image .view #close{color:#D63E19;}
+					#text .view #close{color:#79553C;}
+					#podcast .view #close{color:#168CD0;}
+		/*batch style*/
+		#tags, .share{margin:20px 0;}
+		.share{height:32px;}
+			#tags li,
+			.share li{float:left;margin-right:10px;}/**/
+				#tags li.tag_title,
+				.share li.share_title span{background:url("images/icons_view.jpg") 0 0 no-repeat;display:block;float:left; overflow:hidden;text-indent:-1000px;}
+				.share li.share_title{font-size:32px;font-weight:bold;}
+					.share li.share_title span{height:32px;width:48px;margin-right:10px;}
+				#tags li a{font-size:14px;font-weight:bold;}
+			
+			/**/
+			
+			/*Especific style VIDEO*/
+			#video #tags li.tag_title{background-position:-25px 0;height:18px;width:24px;}
+			#video #tags li a,
+			#video .share li.share_title{color:#a0660a;}
+			#video .share li.share_title span{background-position:-57px 0;}
+			/*Especific style IMAGE*/
+			#image #tags li.tag_title{background-position:-25px -35px;height:18px;width:24px;}
+				#image #tags li a,
+				#image .share li.share_title{color:#860300;}
+			#image .share li.share_title span{background-position:-57px -37px;}
+			/**/
+			#text #tags li.tag_title{background-position:-25px -71px;height:18px;width:24px;}
+				#text #tags li a,
+				#text .share li.share_title{color:#3f2513;}
+			#text .share li.share_title span{background-position:-57px -74px;}
+			/**/
+			#podcast #tags li.tag_title{background-position:-25px -71px;height:18px;width:24px;}
+				#podcast #tags li a,
+				#podcast .share li.share_title{color:#168cd0;}
+			#podcast .share li.share_title span{background-position:-57px -109px;}
+		
+		/*global share icons*/
+		.share li a.twitter,.share li a.delicious,.share li a.facebook{background:url("images/icons_view.jpg") 0 -148px no-repeat #000;display:block;height:24px;width:24px;overflow:hidden;text-indent:-1000px;margin-top:10px;}
+		.share li a.twitter{}
+		.share li a.delicious{background-position:-32px -148px;}
+		.share li a.facebook{background-position:-63px -148px;}
+		
+	/*definir aqui para todas as cats de tags*/
+	#content{margin:20px 0;}
+	#content p,#content h1,#content h2,#content h3{color:#3F2513; padding:10px 0;}
+	#content p{text-indent:20px;}
+	#content ul li{color:#3F2513;list-style:square inside;margin-left:10px;}
+	
+	
+			
+/*LINKS*/
+#links{border-top:#c8a05f 1px solid; background-color:#fefaf1; height:151px;}
+	#links div h3{background:url("images/links_title.jpg") 0 0 no-repeat; height:18px;overflow:hidden;text-indent:-1000px; margin-top:30px;}
+	#links div ul{margin-top:25px;}
+		#links div ul li{float:left;}
+			#links div ul a{background:url("images/links_img.jpg") 0 0 no-repeat;display:block; float:left; height:48px;overflow:hidden; text-indent:-1000px;}
+				#links div ul a.mobile{width:99px;}
+				#links div ul a.podcast{background-position:-99px 0;width:136px;}
+				#links div ul a.webtv{background-position:-235px 0;width:136px;}
+				#links div ul a.twitter{background-position:-365px 0;width:108px;}
+				#links div ul a.gf{background-position:-475px 0;width:141px;}
+				#links div ul a.orkut{background-position:-615px 0;width:88px;}
+			
+			
+/*FOOTER*/
+#footer{background:url("images/bk_footer.jpg") 0 0 repeat-x; height:85px;}
+	#footer div address{background:url("images/copyright.png") 0 0 no-repeat;height:14px;line-height:85px;overflow:hidden;position:relative;top:36px;text-indent:-1000px;}
+	#footer div a{background:url("images/dev.png") 0 0 no-repeat;height:28px;overflow:hidden;position:relative;top:30px;left:314px; text-indent:-1000px;}
+	
+/*.container_14 #text .grid_10 p {font-size:1.2em;color:#79553C;} */
+
+.container_14 .grid_3.view{display:none;}
+
+ li.thumb{overflow:hidden;}
+ .thumb ul{width:2100px;}
+	#video .thumb ul{width:10000px;}
+.thumb li{overflow:hidden;}
+.thumb li p{}
+ .thumb.on li{float:none;}
+
+	#close{float: right; text-decoration: none; font-weight:bold;}
+	#close:hover {}	
+	.grid_10 img{width:auto;height:auto;}

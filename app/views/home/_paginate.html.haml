@@ -1,0 +1,11 @@
+%li.grid_2
+	%h2.title(title=contentType) 
+		= contentType
+	- a_class = "next"; 
+	- a_class += " disable" if disablePaginate
+	%a(href="#next" class=a_class) 
+		Próximo
+		%span >>
+	%a.prev.disable(href="#previous")
+		%span <<
+		Anterior

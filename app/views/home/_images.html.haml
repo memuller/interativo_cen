@@ -1,0 +1,18 @@
+%ul#image.clearfix
+	= render :partial => 'paginate' , :locals => {:contentType => "Imagens", :disablePaginate => (image.size < 5)}
+			
+	- if image.size > 0
+		%li.thumb
+			%ul
+				- image.each do |entry|
+					%li.grid_3
+						= get_image entry.content
+						%p
+							= entry.title
+						%small
+							%span.time
+							= time_ago_in_words entry.published
+						%span.clear
+						%a.expand{:href => entry.url} ampliar a imagem 
+	- else
+		%li.empty nenhuma imagem

@@ -1,0 +1,19 @@
+%ul#text.clearfix
+	= render :partial => 'paginate' , :locals => {:contentType => "Textos", :disablePaginate => (microblog.size < 5)}
+			
+	- if microblog.size > 0
+		%li.thumb
+			%ul
+				- microblog.each do |entry|
+					%li.grid_3
+						%p
+							= entry.title
+						%a.author{ :href=> entry.url} 
+							%span
+							= entry.author
+						%small
+							%span.time
+							= time_ago_in_words entry.published
+						%span.clear
+	- else
+		%li.empty nenhum microblog

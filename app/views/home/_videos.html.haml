@@ -1,0 +1,18 @@
+%ul#video.clearfix
+	= render :partial => 'paginate' , :locals => {:contentType => "Videos", :disablePaginate => (video.size < 5)}
+			
+	- if video.size > 0
+		%li.thumb
+			%ul
+				- video.each do |entry|
+					%li.grid_3
+						= getImageVideo entry
+						%a.play{ :href=> entry.url } Assista o vídeo.
+						%p
+							= entry.title
+						%small
+							%span.time
+							= time_ago_in_words entry.published
+						%span.clear
+	- else
+		%li.empty nenhum video

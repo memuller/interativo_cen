@@ -1,0 +1,86 @@
+!!! strict
+%html(xmlns="http://www.w3.org/1999/xhtml" xml:lang="en")
+	%head 
+		%title CEN 2010 - Congresso Eucarístico Nacional 
+		%meta( http-equiv="Content-type" content="text/html; charset=utf-8")
+		= stylesheet_link_tag :all
+		= javascript_include_tag "prototype", "scriptaculous", "application"
+	
+
+%body 
+	#top
+		#wrap.container_14.clearfix
+			%a(href="/")
+				%h1.grid_5(title="Bem vindo a página de divulgação do CEN - 2010")>
+					%abbr(title="Congresso Eucarístico Nacional") 
+						CEN - 
+					2010.
+			%ul.grid_6
+				%li
+					%a.about(href="http://www.cen2010.org.br/index.php?option=com_content&task=view&id=14&Itemid=35" title="Sobre o CEN (Congresso Eucarístico Nacional) - 2010")CEN 2010
+				%li
+					%a.arrive(href="http://www.cen2010.org.br/index.php?option=com_content&task=view&id=24&Itemid=51" title="Como chegar ao local do evento")Como chegar
+				%li
+					%a.talk(href="http://www.cen2010.org.br/index.php?option=com_contact&Itemid=99" title="Fale conosco com a equipe do CEN")Fale conosco
+
+		
+			- form_tag(:search, {:method => :get, :class => "grid_6", :id => 'search'}) do
+				%fieldset 
+					= text_field_tag "q", params[:q]
+				%input(type="submit")
+
+			= link_to "Quer que o seu conteúdo apareça aqui?", :how_contribute, {:title => "Quer que o seu conteúdo apareça aqui?", :class=>"grid_6 push_2", :id => "help"}
+			
+	%hr
+	%span.clear
+	
+	.container_14
+
+		= yield
+	
+
+	%hr
+	#links
+		.container_14
+			%h3(title="Confira também os canais online do CEN (Congresso Eucarístico Nacional) 2010")>
+				Confira também os canais online do 
+				%abbr(title="Congresso Eucarístico Nacional") CEN
+				2010
+			%ul
+				%li
+					%a.mobile(href="http://www.cancaonovamobile.com/promocao_cen.php" title="CEN no Canção Nova Mobile") Mobile
+				%li
+					%a.podcast(href="http://podcast.cancaonova.com/canal/Interativocen" title="CEN no Portal de podcast Canção Nova") Podcast
+				%li
+					%a.webtv(href="http://www.webtvcn.com/canal/cen_2010/" title="CEN WebTv - Canção Nova") WebTvCN
+				%li
+					%a.twitter(href="https://twitter.com/cen2010" title="CEN no Twitter") Twitter
+				%li
+					%a.gf(href="http://gentedefe.com/" title="CEN na rede social Gente de Fé") Gente de Fé
+				%li
+					%a.orkut(href="http://www.orkut.com.br/Main#Community.aspx?cmm=57524988" title="CEN na rede social Orkut") Orkut.
+	%hr
+
+
+
+		#footer
+			.container_14.clearfix
+				%address.grid_7(title="Congresso Eucarístico Nacional - Direitos Reservados - 2010") Congresso Eucarístico Nacional - Direitos Reservados - 2010
+				%a.grid_4( href="http://www.cancaonova.com" title="Aplicativo produzido por desenvolvimento TI Canção Nova")
+					produzido por:
+					%span Canção Nova.
+				
+
+
+	%script( type="text/javascript")
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-16387682-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
