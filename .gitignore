@@ -11,3 +11,4 @@ test/coverage/*
 coverage/*
 vendor/gems/*
 vendor/plugins/*
+*.swp
